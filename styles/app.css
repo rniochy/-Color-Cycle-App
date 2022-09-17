@@ -39,7 +39,15 @@ section {
      flex-direction: column;
      row-gap: 0.5rem;
 }
-
+section #r {
+      color: red;
+}
+section #g {
+      color: green;
+}
+section #b {
+      color: blue;
+}
 input {
      width: 5rem;
      text-align: center;

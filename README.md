@@ -30,6 +30,6 @@ an RGB color specification (e.g. `#000000` color code).
 -   [ ] User will receive an warning if something other than hexadecimal digits
         are entered for the color components
 
-## Bonus features
+<!-- ## Bonus features
 -   [ ] User can change the time interval between color changes
--   [ ] User can specify the color encoding format used from RGB to another format like HSL
+-   [ ] User can specify the color encoding format used from RGB to another format like HSL -->
