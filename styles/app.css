@@ -1,3 +1,6 @@
+/* body {
+     background-color: rgba(0, 0, 0, 0.904);
+} */
 * {
      margin: 0;
      padding: 0;
@@ -29,12 +32,6 @@
      grid-template-columns: repeat(4, 1fr);
      grid-template-rows: repeat(4, 1fr);
 
-}
-#button {
-     margin-top: 1rem;
-     grid-column: 1/5;
-     border-radius: .5rem;
-     font-weight: bold;
 }
 
 section {
@@ -71,4 +68,13 @@ label {
 }
  span + #green  {
      color: green
+}
+#button {
+    margin-top: 1rem;
+    grid-column: 1/5;
+    border-radius: .5rem;
+    font-weight: bold;
+}
+#button:hover {
+    background-color: #ccc;
 }
