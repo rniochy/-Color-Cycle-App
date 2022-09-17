@@ -22,3 +22,7 @@ an RGB color specification (e.g. `#000000` color code).
         changes to 'Start' when stopped and 'Stop' when started
 -   [ ] User will receive an warning if something other than hexadecimal digits
         are entered for the color components
+
+## Bonus features
+-   [ ] User can change the time interval between color changes
+-   [ ] User can specify the color encoding format used from RGB to another format like HSL
