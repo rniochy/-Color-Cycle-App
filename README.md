@@ -1,3 +1,5 @@
+## The GOAL!!!
+
 The use of color plays a major role in an applications User Interface and
 User Experience (UI/UX). ColorCycle seeks to help WebDev's better understand
 RBG colors by making small changes to a colored box over time.
