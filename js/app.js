@@ -9,14 +9,25 @@ const checkBoxGreen = document.getElementById('checkbox-green');
 
 const button = document.getElementById('button');
 
+
+boxColor.style.background = `#${inputRed.value}${inputGreen.value}${inputBlue.value}`;
+
 function buttonClick () {
-    if(button.innerText === 'Play'){
+    if(button.innerText === 'Start'){
         button.innerText = "Stop"
-        alert(button.innerText);
+     
     } else {
-        button.innerText = "Play"
-        alert(button.innerText);
+        button.innerText = "Start"  
     }
 }
 
 button.addEventListener('click', buttonClick);
+inputRed.addEventListener('change', ()=>{
+    boxColor.style.background = `#${inputRed.value}${inputGreen.value}${inputBlue.value}`;
+});
+inputGreen.addEventListener('change', ()=>{
+    boxColor.style.background = `#${inputRed.value}${inputGreen.value}${inputBlue.value}`;
+});
+inputBlue.addEventListener('change', ()=>{
+    boxColor.style.background = `#${inputRed.value}${inputGreen.value}${inputBlue.value}`;
+});
