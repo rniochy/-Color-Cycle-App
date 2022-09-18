@@ -23,10 +23,25 @@ function disableInput(input, value){
 function ableInput(input){
     input.removeAttribute('disabled');
 }
+ function findValueInput(input){
+     return colorValues.findIndex(v=> v ===input.toUpperCase());
+ }
+
+function verifyExadecimalValue(input){
+    let value0 =findValueInput(input.value[0]);
+    let value1 =findValueInput(input.value[1]);
+    
+    if(value0 === -1 || value1 === -1){
+        alert("Only Exadecimal Value is allowed.")
+        return false;
+    } else {
+         return true;
+    }
+}
 
 function incrementColor(input, index){
-    let value0 = colorValues.findIndex(v=> v ===input.value[0].toUpperCase());
-    let value1 = colorValues.findIndex(v=> v ===input.value[1].toUpperCase());
+    let value0 =findValueInput(input.value[0]);
+    let value1 =findValueInput(input.value[1]);
     
     if(value0 === 16) value0 = 0;  if(value1 === 16) value1 = 0;
    
@@ -65,24 +80,30 @@ function buttonClick () {
     }
 }
 
-
 button.addEventListener('click', buttonClick);
 inputRed.addEventListener('change', setBackground);
 inputGreen.addEventListener('change',setBackground);
 inputBlue.addEventListener('change',setBackground);
 
 inputIntervalValue.addEventListener('change', function() {
-     intervalValue = parseInt(inputIntervalValue.value);
+     verify? intervalValue = parseInt(inputIntervalValue.value) : ''
+    
 })
-checkBoxBlue.addEventListener('change', function(){   
-    this.checked?  incrementColor(inputBlue, timerBlue) : clearInterval(timer[timerBlue])
+checkBoxBlue.addEventListener('change', function(){  
+    const verify = verifyExadecimalValue(inputBlue); 
+    verify ?
+    this.checked?  incrementColor(inputBlue, timerBlue) : clearInterval(timer[timerBlue]) : ''
 });
-checkBoxGreen.addEventListener('change', function(){   
-    this.checked?  incrementColor(inputGreen, timerGreen) : clearInterval(timer[timerGreen])
+checkBoxGreen.addEventListener('change', function(){  
+    const verify = verifyExadecimalValue(inputBlue); 
+    verify ? 
+    this.checked?  incrementColor(inputGreen, timerGreen) : clearInterval(timer[timerGreen]) : ''
     
 });
 checkBoxRed.addEventListener('change', function(){   
-    this.checked?  incrementColor(inputRed, timerRed) : clearInterval(timer[timerRed])
+    const verify = verifyExadecimalValue(inputBlue); 
+    verify ?
+    this.checked?  incrementColor(inputRed, timerRed) : clearInterval(timer[timerRed]):''
     
 })
 setBackground();
