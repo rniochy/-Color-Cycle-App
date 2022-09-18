@@ -2,6 +2,7 @@ const boxColor = document.getElementById('box-color');
 let inputRed = document.getElementById('red');
 let inputBlue = document.getElementById('blue');
 let inputGreen = document.getElementById('green');
+let inputIntervalValue = document.getElementById('intervalvalueInput');
 const checkBoxRed = document.getElementById('checkbox-red');
 const checkBoxBlue = document.getElementById('checkbox-blue');
 const checkBoxGreen = document.getElementById('checkbox-green');
@@ -69,15 +70,19 @@ button.addEventListener('click', buttonClick);
 inputRed.addEventListener('change', setBackground);
 inputGreen.addEventListener('change',setBackground);
 inputBlue.addEventListener('change',setBackground);
-setBackground();
+
+inputIntervalValue.addEventListener('change', function() {
+     intervalValue = parseInt(inputIntervalValue.value);
+})
 checkBoxBlue.addEventListener('change', function(){   
     this.checked?  incrementColor(inputBlue, timerBlue) : clearInterval(timer[timerBlue])
 });
 checkBoxGreen.addEventListener('change', function(){   
     this.checked?  incrementColor(inputGreen, timerGreen) : clearInterval(timer[timerGreen])
-
+    
 });
 checkBoxRed.addEventListener('change', function(){   
     this.checked?  incrementColor(inputRed, timerRed) : clearInterval(timer[timerRed])
-
+    
 })
+setBackground();
