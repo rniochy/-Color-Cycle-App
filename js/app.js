@@ -10,6 +10,7 @@ const button = document.getElementById('button');
 let timer = [undefined, undefined, undefined];
 const timerBlue = 1, timerGreen = 0, timerRed= 2;
 const colorValues = ['0','1', '2','3','4','5','6','7', '8','9','A','B','C','D','F','G','H'];
+let intervalValue = 250;
 
 
 function setBackground(){
@@ -39,7 +40,7 @@ function incrementColor(input, index){
           } else {
               value1++;
           }
-       }, 250);
+       }, intervalValue);
 }
 
 function buttonClick () {
